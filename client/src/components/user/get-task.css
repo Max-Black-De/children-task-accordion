@@ -15,8 +15,6 @@ h1 {
 
 .background {
     margin: auto;
-    /* padding-top: 40px; */
-    /* background: url('../images/background.svg'); */
     width: 375px;
     min-height: 812px;
     object-fit: cover;

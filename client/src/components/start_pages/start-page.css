@@ -18,8 +18,6 @@ font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 375px;
     height: auto;
-    border: solid black;
-    /* border-radius: 30px; */
     object-fit: cover;
 }
 
@@ -41,6 +39,7 @@ font-family: 'Montserrat', sans-serif;
 
   .create-square {
     text-align: center;
+    vertical-align:text-bottom;
     cursor: pointer;
     height: 150px;
     width: 150px;
@@ -77,4 +76,8 @@ font-family: 'Montserrat', sans-serif;
     background-color: transparent;
     color: transparent;
     border-radius: 15px;
+  }
+
+  .img {
+    margin-top: 200px;
   }

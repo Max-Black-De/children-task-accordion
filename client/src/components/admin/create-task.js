@@ -154,6 +154,9 @@ export default function CreateTask() {
 // TUESDAY
   const [inputTues, setInputTues] = useState("");
   const [itemsTues, setItemsTues] = useState([]);
+  const deleteTasksTues = () => {
+    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+  }
   const submitTasksTues = () => {
   Axios.post('http://localhost:3001/api/inserttuesday',{
     tasksOfDay: inputTues
@@ -179,6 +182,9 @@ function removeItemTues(id) {
 // WEDNESDAY
   const [inputWed, setInputWed] = useState("");
   const [itemsWed, setItemsWed] = useState([]);
+  const deleteTasksWed = () => {
+    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+  }
   const submitTasksWed = () => {
     Axios.post('http://localhost:3001/api/insertwednesday',{
       tasksOfDay: inputWed
@@ -204,6 +210,9 @@ function removeItemWed(id) {
 // THUSDAY
   const [inputThusd, setInputThusd] = useState("");
   const [itemsThusd, setItemsThusd] = useState([]);
+  const deleteTasksThusd = () => {
+    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+  }
   const submitTasksThusd = () => {
     Axios.post('http://localhost:3001/api/insertthusday',{
       tasksOfDay: inputThusd
@@ -229,6 +238,9 @@ function removeItemThusd(id) {
 // FRIDAY
 const [inputFri, setInputFri] = useState("");
   const [itemsFri, setItemsFri] = useState([]);
+  const deleteTasksFri = () => {
+    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+  }
 const submitTasksFri = () => {
   Axios.post('http://localhost:3001/api/insertfriday',{
     tasksOfDay: inputFri
@@ -254,6 +266,9 @@ function removeItemFri(id) {
 // SATURDAY
   const [inputSat, setInputSat] = useState("");
   const [itemsSat, setItemsSat] = useState([]);
+  const deleteTasksSat = () => {
+    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+  }
   const submitTasksSat = () => {
   Axios.post('http://localhost:3001/api/insertsaturday',{
     tasksOfDay: inputSat
@@ -279,6 +294,9 @@ function removeItemSat(id) {
 // SUNDAY
   const [inputSun, setInputSun] = useState("");
   const [itemsSun, setItemsSun] = useState([]);
+  const deleteTasksSun = () => {
+    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+  }
   const submitTasksSun = () => {
   Axios.post('http://localhost:3001/api/insertsunday',{
     tasksOfDay: inputSun
@@ -344,10 +362,16 @@ function removeItemSun(id) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
+          <div className="btns">
             <Button className={classes.stylesForButn}
             onClick={addItemTues}>
             Add
             </Button>
+            <Button className={classes.DeleteButn}
+              onClick={deleteTasksTues}>
+              Delete
+              </Button>
+              </div>
             <TextField id="standart-basic" label='Add to do' value={inputTues}
             onChange={(event) => {setInputTues(event.target.value)}}
             ></TextField>
@@ -371,10 +395,16 @@ function removeItemSun(id) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
+          <div className="btns">
             <Button className={classes.stylesForButn}
             onClick={addItemWed}>
             Add
             </Button>
+            <Button className={classes.DeleteButn}
+              onClick={deleteTasksWed}>
+              Delete
+              </Button>
+              </div>
             <TextField id="standart-basic" label='Add to do' value={inputWed}
             onChange={(event) => {setInputWed(event.target.value)}}
             ></TextField>
@@ -398,10 +428,16 @@ function removeItemSun(id) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
+          <div className="btns">
             <Button className={classes.stylesForButn}
             onClick={addItemThusd}>
             Add
             </Button>
+            <Button className={classes.DeleteButn}
+              onClick={deleteTasksThusd}>
+              Delete
+              </Button>
+              </div>
             <TextField id="standart-basic" label='Add to do' value={inputThusd}
             onChange={(event) => {setInputThusd(event.target.value)}}
             ></TextField>
@@ -425,10 +461,16 @@ function removeItemSun(id) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
+          <div className="btns">
             <Button className={classes.stylesForButn}
             onClick={addItemFri}>
             Add
             </Button>
+            <Button className={classes.DeleteButn}
+              onClick={deleteTasksFri}>
+              Delete
+              </Button>
+              </div>
             <TextField id="standart-basic" label='Add to do' value={inputFri}
             onChange={(event) => {setInputFri(event.target.value)}}
             ></TextField>
@@ -452,10 +494,16 @@ function removeItemSun(id) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
+          <div className="btns">
             <Button className={classes.stylesForButn}
             onClick={addItemSat}>
             Add
             </Button>
+            <Button className={classes.DeleteButn}
+              onClick={deleteTasksSat}>
+              Delete
+              </Button>
+              </div>
             <TextField id="standart-basic" label='Add to do' value={inputSat}
             onChange={(event) => {setInputSat(event.target.value)}}
             ></TextField>
@@ -479,10 +527,16 @@ function removeItemSun(id) {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
+          <div className="btns">
             <Button className={classes.stylesForButn}
             onClick={addItemSun}>
             Add
             </Button>
+            <Button className={classes.DeleteButn}
+              onClick={deleteTasksSun}>
+              Delete
+              </Button>
+              </div>
             <TextField id="standart-basic" label='Add to do' value={inputSun}
             onChange={(event) => {setInputSun(event.target.value)}}
             ></TextField>

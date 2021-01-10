@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink, Link, BrowserRouter } from 'react-router-dom';
 import "./start-page.css";
+import back from "../images/new.svg"
 class Main extends Component {
     render() {
     return (
@@ -15,7 +16,9 @@ class Main extends Component {
                     <div className="get-square"><NavLink to="/get-task">Get task</NavLink></div>
                     <div className="empty-square"></div>
                 </div>
-                <img src="../images/new.svg" alt="back" ></img>
+                <div className='img'>
+                    <img src={back} alt="back" ></img>
+                </div>
             </div>
         </div>
     );

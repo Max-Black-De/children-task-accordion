@@ -8,9 +8,7 @@ body{
     padding: 0;
     outline: 0;
 }
-/* здесь начинается тело */
 h1 {
-    /* margin-top: 30px; */
     text-align: center;
 }
 .main {
@@ -23,7 +21,6 @@ h1 {
     position: relative;
     margin: auto;
     padding-top: 40px;
-    background-color: white;
     width: 375px;
     height: auto;
     object-fit: cover;
