@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
+body{
+font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+/* здесь начинается тело */
+h1 {
+    text-align: center;
+}
+
+.background {
+    margin: auto;
+    /* padding-top: 40px; */
+    /* background: url('../images/background.svg'); */
+    width: 375px;
+    min-height: 812px;
+    object-fit: cover;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
