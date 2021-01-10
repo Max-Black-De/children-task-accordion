@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import "./get-task.css";
+import Header from '../start_pages/header';
 
 const useStyles = makeStyles(() => ({
   
@@ -196,6 +197,8 @@ export default function GetTask() {
   };
 
   return (
+  <div className="main">
+    <Header />
     <div className="background">
       <h1>Hello Kira</h1>
       <Accordion className={classes.dayBlockMon}>
@@ -250,7 +253,7 @@ export default function GetTask() {
       
       <Accordion className={classes.dayBlockWed}>
         <AccordionSummary
-        ><p>Wednesdsay</p>
+        ><p>Wednesday</p>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -372,6 +375,7 @@ export default function GetTask() {
           </Typography>
         </AccordionDetails>
       </Accordion><div></div>
+    </div>
     </div>
   );
 }

@@ -5,12 +5,10 @@ font-family: 'Montserrat', sans-serif;
 .App {
   text-align: center;
 }
-.background {
+.main {
   margin: auto;
   position: relative;
-  /* background: url('./components/images/background.svg') no-repeat center center; */
   width: 375px;
   height: auto;
-  /* border-radius: 30px; */
   object-fit: cover;
 }

@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import List from '@material-ui/core/List';
 import "./create-task.css";
+import Header from '../start_pages/header';
 
 
 
@@ -38,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
     DeleteButn: {
       borderRadius: 25,
+      border: '0.5px solid #8b3a4d',
       width: '45px',
       height: '25px',
       margin: '10px 0 0 10px',
@@ -300,6 +302,7 @@ function removeItemSun(id) {
 };
   return (
     <div className="main">
+      <Header />
     <div className="background">
       <h1>Hello</h1>
       <Accordion className={classes.dayBlockMon}>
