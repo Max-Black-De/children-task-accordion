@@ -20,7 +20,6 @@ h1 {
     box-sizing: content-box;
     position: relative;
     margin: auto;
-    padding-top: 40px;
     width: 375px;
     height: auto;
     object-fit: cover;
