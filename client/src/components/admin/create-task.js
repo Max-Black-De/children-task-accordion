@@ -126,9 +126,12 @@ export default function CreateTask() {
 // MONDAY
   const [inputMon, setInputMon] = useState("");
   const [itemsMon, setItemsMon] = useState([]);
+
   const deleteTasksMon = () => {
-    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
-  }
+    Axios.delete('http://localhost:3001/api/deletemonday')
+    console.log('push')
+  };
+
   const submitTasksMon = () => {
     Axios.post('http://localhost:3001/api/insertmonday',{
       tasksOfDay: inputMon
@@ -154,8 +157,9 @@ export default function CreateTask() {
 // TUESDAY
   const [inputTues, setInputTues] = useState("");
   const [itemsTues, setItemsTues] = useState([]);
+
   const deleteTasksTues = () => {
-    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+    Axios.delete('http://localhost:3001/api/deletetuesday')
   }
   const submitTasksTues = () => {
   Axios.post('http://localhost:3001/api/inserttuesday',{
@@ -183,7 +187,7 @@ function removeItemTues(id) {
   const [inputWed, setInputWed] = useState("");
   const [itemsWed, setItemsWed] = useState([]);
   const deleteTasksWed = () => {
-    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+    Axios.delete('http://localhost:3001/api/deletewednesday')
   }
   const submitTasksWed = () => {
     Axios.post('http://localhost:3001/api/insertwednesday',{
@@ -211,7 +215,7 @@ function removeItemWed(id) {
   const [inputThusd, setInputThusd] = useState("");
   const [itemsThusd, setItemsThusd] = useState([]);
   const deleteTasksThusd = () => {
-    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+    Axios.delete('http://localhost:3001/api/deletethusday')
   }
   const submitTasksThusd = () => {
     Axios.post('http://localhost:3001/api/insertthusday',{
@@ -239,7 +243,7 @@ function removeItemThusd(id) {
 const [inputFri, setInputFri] = useState("");
   const [itemsFri, setItemsFri] = useState([]);
   const deleteTasksFri = () => {
-    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+    Axios.delete('http://localhost:3001/api/deletefriday')
   }
 const submitTasksFri = () => {
   Axios.post('http://localhost:3001/api/insertfriday',{
@@ -267,7 +271,7 @@ function removeItemFri(id) {
   const [inputSat, setInputSat] = useState("");
   const [itemsSat, setItemsSat] = useState([]);
   const deleteTasksSat = () => {
-    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+    Axios.delete('http://localhost:3001/api/deletesaturday')
   }
   const submitTasksSat = () => {
   Axios.post('http://localhost:3001/api/insertsaturday',{
@@ -295,7 +299,7 @@ function removeItemSat(id) {
   const [inputSun, setInputSun] = useState("");
   const [itemsSun, setItemsSun] = useState([]);
   const deleteTasksSun = () => {
-    Axios.delete('http://localhost:3001/api/delete', {taskOfDay: inputMon})
+    Axios.delete('http://localhost:3001/api/deletesunday')
   }
   const submitTasksSun = () => {
   Axios.post('http://localhost:3001/api/insertsunday',{

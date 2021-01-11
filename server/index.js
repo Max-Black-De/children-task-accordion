@@ -3,9 +3,8 @@ const app = express();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { json } = require('body-parser');
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: 'Black_Devil_!985',
@@ -31,15 +30,12 @@ app.post('/api/insertmonday', (req, res) => {
         console.log(result)
     });
 });
-app.delete('/api/deletemonday', (req,res) => {
-    var tasksOfDay = req.body.tasksOfDay;
-    var sqlDelete =
-    "DELETE * FROM monday (tasks)";
-    connection.query(sqlinsert, (err, result) => {
+app.delete('/api/deletemonday', (req, res) => {
+    
+    connection.query("DELETE FROM monday", (err, result) => {
         console.log(result)
     });
-
-    console.log('delete');
+    console.log('deleted');
 });
 
 // TUESDAY
@@ -59,7 +55,12 @@ app.post('/api/inserttuesday', (req, res) => {
     });
 });
 app.delete('/api/deletetuesday', (req,res) => {
-    console.log('delete');
+    var sqlDelete =
+    "DELETE FROM tuesday";
+    connection.query(sqlDelete, (err, result) => {
+        console.log(result)
+    });
+    console.log('deleted');
 });
 // WEDNESDAY
 app.get('/api/getwednesday', (req, res) => {
@@ -69,8 +70,7 @@ app.get('/api/getwednesday', (req, res) => {
     });
 })
 app.post('/api/insertwednesday', (req, res) => {
-    var tasksOfDay = req.body.tasksOfDay;    
-
+    var tasksOfDay = req.body.tasksOfDay; 
     var sqlinsert =
     "INSERT INTO wednesday (tasks) VALUES (?)";
     connection.query(sqlinsert, [tasksOfDay], (err, result) => {
@@ -78,7 +78,12 @@ app.post('/api/insertwednesday', (req, res) => {
     });
 });
 app.delete('/api/deletewednesday', (req,res) => {
-    console.log('delete');
+    var sqlDelete =
+    "DELETE FROM wednesday";
+    connection.query(sqlDelete, (err, result) => {
+        console.log(result)
+    });
+    console.log('deleted');
 });
 // THUSDAY
 app.get('/api/getthusday', (req, res) => {
@@ -96,8 +101,12 @@ app.post('/api/insertthusday', (req, res) => {
         console.log(result)
     });
 });
-app.delete('/api/deletethusday', (req,res) => {
-    console.log('delete');
+app.delete('/api/deletethusday', (req, res) => {
+    
+    connection.query("DELETE FROM thusday;", (err, result) => {
+        console.log(result)
+    });
+    console.log('deleted');
 });
 
 // FRIDAY
@@ -117,7 +126,12 @@ app.post('/api/insertfriday', (req, res) => {
     });
 });
 app.delete('/api/deletefriday', (req,res) => {
-    console.log('delete');
+    var sqlDelete =
+    "DELETE FROM friday";
+    connection.query(sqlDelete, (err, result) => {
+        console.log(result)
+    });
+    console.log('deleted');
 });
 
 // SATURDAY
@@ -137,7 +151,12 @@ app.post('/api/insertsaturday', (req, res) => {
     });
 });
 app.delete('/api/deletesaturday', (req,res) => {
-    console.log('delete');
+    var sqlDelete =
+    "DELETE FROM saturday";
+    connection.query(sqlDelete, (err, result) => {
+        console.log(result)
+    });
+    console.log('deleted');
 });
 
 // SUNDAY
@@ -157,7 +176,12 @@ app.post('/api/insertsunday', (req, res) => {
     });
 });
 app.delete('/api/deletesunday', (req,res) => {
-    console.log('delete');
+    var sqlDelete =
+    "DELETE FROM sunday";
+    connection.query(sqlDelete, (err, result) => {
+        console.log(result)
+    });
+    console.log('deleted');
 });
 
 

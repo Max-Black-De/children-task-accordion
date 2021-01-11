@@ -23,10 +23,9 @@ font-family: 'Montserrat', sans-serif;
 
 .status {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 60px;
   margin-left: 4px;
-  cursor: pointer;
   font-size: 18px;
   height: 60px;
   width: 367px;
@@ -37,9 +36,14 @@ font-family: 'Montserrat', sans-serif;
     width: 367px;
   }
 
+  .texta{
+    margin-top: 65px;
+  }
+
   .create-square {
+    display: flex;
+    justify-content:space-around;
     text-align: center;
-    vertical-align:text-bottom;
     cursor: pointer;
     height: 150px;
     width: 150px;
