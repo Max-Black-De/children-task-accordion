@@ -4,8 +4,9 @@ function TodoItem({ id, item, onCheck }) {
     return (
         <>
         <li
-            onClick={() => {onCheck(id)}}
+            // onClick={() => {onCheck(id)}}
         >
+            <input type="checkbox"/> 
             {item}  
         </li>
         </>

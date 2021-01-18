@@ -31,21 +31,28 @@ font-family: 'Montserrat', sans-serif;
   width: 367px;
   }
 
-  h1{
+.chnTsk {
     margin-top: 35px;
     height: 45px;
     width: 367px;
   }
 
   .texta{
+    text-decoration: none;
     margin-top: 65px;
   }
 
+.create {
+  color: #8b3a4d
+}
+
+.get {
+  color: #9291e1
+}
   .create-square {
-    display: flex;
     justify-content:space-around;
     text-align: center;
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 150px;
     width: 150px;
     background-color: #eaccd7;
@@ -55,7 +62,7 @@ font-family: 'Montserrat', sans-serif;
   
   .get-square {
     text-align: center;
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 150px;
     width: 150px;
     background-color: #dbdbf2;
@@ -63,7 +70,7 @@ font-family: 'Montserrat', sans-serif;
     border-radius: 15px;
   }
 
-  .inpit-block {
+  .input-block {
     display: flex;
     justify-content: space-evenly;
     margin-top: 150px;

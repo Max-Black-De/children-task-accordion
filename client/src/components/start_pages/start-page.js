@@ -6,31 +6,33 @@ import TextField from '@material-ui/core/TextField';
 
 class Main extends Component {
 
-    
     render() {
     return (
 
-        
-
-
         <div className="wraper">
-            <h1>Children task</h1>
+            <h1 className="chnTsk" >Children task</h1>
             <div className="main">
                 <div className="status">
-                    <div className="create-square"><NavLink to="/create-task"><p className="texta">Create</p></NavLink></div>
-                    <div className="get-square"><NavLink to="/get-task"><p className="texta">Get task</p></NavLink></div>
+                    <div className="create-square">
+                        <NavLink className="texta" to="/create-task">
+                            <p className="texta create">Create</p>
+                        </NavLink>
+                    </div>
+                    <div className="get-square">
+                        <NavLink className="texta" to="/get-task">
+                            <p className="texta get">Get task</p>
+                        </NavLink>
+                    </div>
                 </div>
-                <div className="inpit-block">
+                <div className="input-block">
                     <TextField
                     id="standart-basic"
                     label='Login:'
-                    // value={inputMon}
                     // onChange={(event) => {setInputMon(event.target.value)}}
                     ></TextField>
                     <TextField
                     id="standart-basic"
                     label='Password'
-                    // value={inputMon}
                     // onChange={(event) => {setInputMon(event.target.value)}}
                     ></TextField>
                 </div>

@@ -14,7 +14,21 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// MONDAY
+let users = [
+    {id: 1, login: 'Mother', password: '1111'},
+    {id: 2, login: 'Father', password: '1111'}
+    ];
+app.post('/registration', function (req, res){
+    const user = {
+        login: req.body.login,
+        password: req.body.password,
+        id: idSet
+    };
+    users.push(user)
+    idSet += 1;
+    res.json(user);
+});
+
 app.get('/api/getmonday', (req, res) => {
     const sqlSlct = "SELECT * FROM Max_DataBase.monday;"
     connection.query(sqlSlct, (err, result) => {

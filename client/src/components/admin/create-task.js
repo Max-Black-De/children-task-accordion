@@ -139,7 +139,7 @@ export default function CreateTask() {
       alert('successful insert')
     });
   };
-  function addItemMon(event) {
+  function addItemMon() {
     setItemsMon(prevData => {
         return [...prevData, inputMon];
     });
@@ -312,7 +312,7 @@ function addItemSun(event) {
   setItemsSun(prevData => {
       return [...prevData, inputSun];
   });
-  setInputSun("");
+  setInputSun(" ");
   submitTasksSun();
   };
 function removeItemSun(id) {
